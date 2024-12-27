@@ -5,7 +5,6 @@ export interface OrbitingCirclesProps {
   children?: React.ReactNode;
   reverse?: boolean;
   duration?: number;
-  delay?: number;
   radius?: number;
   path?: boolean;
 }
@@ -15,7 +14,6 @@ export default function OrbitingCircles({
   children,
   reverse,
   duration = 20,
-  delay = 0,
   radius = 50,
   path = true,
 }: OrbitingCirclesProps) {

@@ -16,6 +16,7 @@ export default function TransitionSection() {
 
   useEffect(() => {
     if (!containerRef.current) return
+    const container = containerRef.current
 
     // Setup
     sceneRef.current = new THREE.Scene()
@@ -33,7 +34,7 @@ export default function TransitionSection() {
     
     rendererRef.current.setSize(window.innerWidth, window.innerHeight)
     rendererRef.current.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    containerRef.current.appendChild(rendererRef.current.domElement)
+    container.appendChild(rendererRef.current.domElement)
 
     // Partículas
     const particlesGeometry = new THREE.BufferGeometry()
@@ -108,7 +109,9 @@ export default function TransitionSection() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      containerRef.current?.removeChild(rendererRef.current!.domElement)
+      if (container && rendererRef.current) {
+        container.removeChild(rendererRef.current.domElement)
+      }
     }
   }, [])
 

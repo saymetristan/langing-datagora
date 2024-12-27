@@ -14,6 +14,7 @@ export default function WarpTransitionSection() {
 
   useEffect(() => {
     if (!containerRef.current) return
+    const container = containerRef.current
 
     const scene = new THREE.Scene()
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1)
@@ -99,7 +100,9 @@ export default function WarpTransitionSection() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      containerRef.current?.removeChild(renderer.domElement)
+      if (container && renderer) {
+        container.removeChild(renderer.domElement)
+      }
     }
   }, [])
 
