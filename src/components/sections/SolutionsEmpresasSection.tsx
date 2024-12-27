@@ -90,9 +90,8 @@ export default function SolutionsEmpresasSection() {
           Soluciones IA Implementadas
         </h2>
         <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
-          Hemos desarrollado soluciones inteligentes para diversas empresas. 
-        </p>
-        <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+          Hemos desarrollado soluciones inteligentes para diversas empresas.
+          <br /><br />
           ¿Tienes un reto similar? Podemos crear una solución personalizada para ti.
         </p>
         
