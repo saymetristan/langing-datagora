@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
 import { IconType } from 'react-icons'
-import { FaRobot, FaWhatsapp, FaFileAlt, FaPhoneAlt, FaUserTie, FaLanguage } from 'react-icons/fa'
+import { FaWallet, FaDumbbell, FaCamera, FaImage } from 'react-icons/fa'
 import { Space_Grotesk } from 'next/font/google'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -40,41 +40,33 @@ const SolutionCard = ({ title, description, link, Icon }: SolutionCardProps) => 
   </motion.div>
 )
 
-export default function SolutionsEmpresasSection() {
+export default function SolutionsUsuariosSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   const solutions = [
     {
-      title: "ERP Somos Oliver + IA",
-      description: "Sistema integral de gestión empresarial potenciado con IA. Optimiza tus operaciones, facturación y control de inventario con inteligencia artificial.",
-      link: "https://somosoliver.com",
-      Icon: FaRobot
+      title: "Asesor Financiero Personal",
+      description: "Administra tus finanzas de manera sencilla con alertas, reportes y seguimiento automático desde tu móvil.",
+      link: "https://getwispen.com",
+      Icon: FaWallet
     },
     {
-      title: "Agentes IA en Redes Sociales",
-      description: "Asistentes inteligentes que gestionan conversaciones en WhatsApp, Facebook e Instagram. Procesan texto, imágenes y audio para una atención personalizada 24/7.",
-      link: "https://datagora.carrd.co/",
-      Icon: FaWhatsapp
+      title: "Asistente de Rutinas",
+      description: "Accede a entrenamientos personalizados impulsados por inteligencia artificial que se adaptan a tu progreso y necesidades.",
+      link: "https://actibai.com",
+      Icon: FaDumbbell
     },
     {
-      title: "Automatización de Contenido",
-      description: "Creación y gestión inteligente de contenido para redes sociales. Generamos posts optimizados para tu audiencia manteniendo tu identidad de marca.",
-      Icon: FaFileAlt
+      title: "Plataforma de Fotos Deportivas",
+      description: "Encuentra, compra y administra tus fotos de carreras fácilmente con tecnología de reconocimiento facial y de dorsales.",
+      link: "https://pacerpic.com",
+      Icon: FaCamera
     },
     {
-      title: "Agente IA para Llamadas",
-      description: "Asistente de voz que maneja llamadas entrantes y salientes. Gestiona ventas, agenda citas y brinda soporte técnico con naturalidad.",
-      Icon: FaPhoneAlt
-    },
-    {
-      title: "Agente de Prospección Inteligente",
-      description: "Identifica leads potenciales y genera acercamientos personalizados. Analiza datos para crear estrategias de contacto efectivas.",
-      Icon: FaUserTie
-    },
-    {
-      title: "Traducción Masiva Inteligente",
-      description: "Procesamiento de grandes volúmenes de datos en múltiples idiomas. Ideal para catálogos, documentación y contenido internacional.",
-      Icon: FaLanguage
+      title: "Mejora de Imágenes Ecommerce",
+      description: "Optimiza la presentación de tus productos con iluminación mejorada y fondos personalizados, manteniendo la calidad y el estilo de tus imágenes.",
+      link: "https://lumixfy.com",
+      Icon: FaImage
     }
   ]
 
@@ -116,22 +108,22 @@ export default function SolutionsEmpresasSection() {
   return (
     <section 
       ref={sectionRef}
-      id="solutions" 
-      className="min-h-screen bg-gradient-to-b from-black to-gray-900 py-20 px-4"
+      id="solutions-usuarios" 
+      className="min-h-screen bg-gradient-to-b from-gray-900 to-black py-20 px-4"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className={`${spaceGrotesk.className} text-5xl md:text-6xl font-bold text-center mb-6`}>
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
             Soluciones IA
           </span>
-          {" "}para Empresas
+          {" "}para Usuarios
         </h2>
         <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto flex flex-col gap-6">
-          <span>Impulsa tu negocio con automatizaciones inteligentes que liberan tiempo, reducen costos y multiplican resultados.</span>
-          <span>¿Tienes un reto similar? Podemos crear una solución personalizada para ti.</span>
+          <span>Transforma tu día a día con asistentes inteligentes diseñados para simplificar tus finanzas, salud y estilo de vida.</span>
+          <span>¿Buscas una solución personalizada? Podemos ayudarte a hacerla realidad.</span>
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutions.map((solution, index) => (
             <div key={index} className="solution-card">
               <SolutionCard {...solution} />

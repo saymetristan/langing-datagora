@@ -37,15 +37,18 @@ La web será **una experiencia inmersiva** que combine diseños 3D creados con T
    - **Descripción Breve**:  
      - *“Transforma tu día a día con asistentes inteligentes diseñados para simplificar tus finanzas, salud y estilo de vida.”*  
    - **Galería de Tarjetas** (mismo estilo que la sección anterior):  
-     - **Agente Personal en WhatsApp**  
-       - Texto: *“Gestiona tus finanzas con alertas y seguimientos automáticos desde tu móvil.”*  
+     - **Asesor Financiero Personal en WhatsApp**  
+       - Texto: *“Administra tus finanzas de manera sencilla con alertas, reportes y seguimiento automático desde tu móvil.”*  
+       Link: https://getwispen.com
      - **Asistente de Rutinas de Ejercicio**  
-       - Texto: *“Recibe planes personalizados que evolucionan contigo.”*  
+       - Texto: *“Accede a entrenamientos personalizados impulsados por inteligencia artificial que se adaptan a tu progreso y necesidades.”*  
+       Link: https://actibai.com
      - **Plataforma IA para Carreras Deportivas**  
-       - Texto: *“Busca, compra y gestiona fotos con reconocimiento facial o de dorsales.”*  
-     - **Mejora Inteligente de Imágenes**  
-       - Texto: *“Iluminación optimizada sin perder detalles ni estilo.”*  
-
+       - Texto: *“Encuentra, compra y administra tus fotos de carreras fácilmente con tecnología de reconocimiento facial y de dorsales.”*  
+       Link: https://pacerpic.com
+     - **Mejora Inteligente de Imágenes para Ecommerce**  
+       - Texto: *“Optimiza la presentación de tus productos con iluminación mejorada y fondos personalizados, manteniendo la calidad y el estilo de tus imágenes.”*  
+       Link: https://lumixfy.com
 4. **Sección de Testimonios o Impacto**  
    - **Texto Principal**: “Casos de Éxito y Resultados Reales”  
    - **Subtexto**: *“Desde el aumento de ventas hasta la transformación de la experiencia de usuario, hemos generado valor tangible en cada proyecto.”*  
