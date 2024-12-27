@@ -14,7 +14,8 @@ export default function DataFlowSection() {
 
   useEffect(() => {
     if (!containerRef.current) return
-
+    
+    const container = containerRef.current // Guardamos referencia
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
     const renderer = new THREE.WebGLRenderer({ 
@@ -98,9 +99,9 @@ export default function DataFlowSection() {
     camera.position.z = 5
 
     // Animaciones de entrada/salida con ScrollTrigger
-    const tl = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
-        trigger: containerRef.current,
+        trigger: container,
         start: "top bottom",
         end: "bottom top",
         scrub: 1,
@@ -150,7 +151,9 @@ export default function DataFlowSection() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      containerRef.current?.removeChild(renderer.domElement)
+      if (container && renderer) {
+        container.removeChild(renderer.domElement)
+      }
     }
   }, [])
 
