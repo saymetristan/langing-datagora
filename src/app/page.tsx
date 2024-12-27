@@ -3,6 +3,7 @@ import SolutionsEmpresasSection from '../components/sections/SolutionsEmpresasSe
 import SolutionsUsuariosSection from '../components/sections/SolutionsUsuariosSection'
 import DataFlowSection from '../components/sections/DataFlowSection'
 import TechStackSection from '../components/sections/TechStackSection'
+import ImpactSection from '../components/sections/ImpactSection'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <DataFlowSection />
       <SolutionsUsuariosSection />
       <TechStackSection />
+      <ImpactSection />
     </main>
   )
 }
