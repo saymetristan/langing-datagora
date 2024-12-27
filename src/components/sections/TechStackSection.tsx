@@ -4,7 +4,6 @@ import { Space_Grotesk } from 'next/font/google'
 import OrbitingCircles from "@/components/ui/orbiting-circles"
 import { FaPython, FaReact, FaAws, FaNode } from 'react-icons/fa'
 import { SiOpenai, SiHuggingface, SiSupabase, SiRedis, SiPostgresql, SiNextdotjs, SiElevenlabs, SiMeta } from 'react-icons/si'
-import { BiLogoPostgresql } from 'react-icons/bi'
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
@@ -26,6 +25,9 @@ export default function TechStackSection() {
         <OrbitingCircles className="size-[40px] text-purple-400" duration={20} delay={3} radius={100}>
           <SiHuggingface className="w-8 h-8" />
         </OrbitingCircles>
+        <OrbitingCircles className="size-[40px] text-cyan-400" duration={20} delay={6} radius={100}>
+          <SiMeta className="w-8 h-8" />
+        </OrbitingCircles>
         
         {/* Círculo medio */}
         <OrbitingCircles className="size-[40px] text-purple-400" duration={22} radius={150}>
@@ -38,7 +40,7 @@ export default function TechStackSection() {
           <SiRedis className="w-8 h-8" />
         </OrbitingCircles>
         <OrbitingCircles className="size-[40px] text-purple-400" duration={22} delay={12} radius={150}>
-          <BiLogoPostgresql className="w-8 h-8" />
+          <SiPostgresql className="w-8 h-8" />
         </OrbitingCircles>
 
         {/* Círculo exterior */}
