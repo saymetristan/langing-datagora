@@ -4,7 +4,7 @@ import SolutionsUsuariosSection from '../components/sections/SolutionsUsuariosSe
 import DataFlowSection from '../components/sections/DataFlowSection'
 import TechStackSection from '../components/sections/TechStackSection'
 import ImpactSection from '../components/sections/ImpactSection'
-
+import CTASection from '../components/sections/CTASection'
 export default function Home() {
   return (
     <main>
@@ -14,6 +14,7 @@ export default function Home() {
       <SolutionsUsuariosSection />
       <TechStackSection />
       <ImpactSection />
+      <CTASection />
     </main>
   )
 }
