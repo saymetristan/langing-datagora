@@ -131,20 +131,39 @@ export default function HeroSection() {
       <canvas ref={canvasRef} className="absolute inset-0" />
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/70" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
-        <h1 ref={titleRef} className="text-5xl md:text-7xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500">
-          Redefine el Presente.<br/>Conquista el Futuro con IA.
+        <h1 
+          ref={titleRef} 
+          className="text-5xl md:text-7xl font-bold text-center mb-6 tracking-tight"
+          style={{
+            textShadow: '0 0 20px rgba(255,255,255,0.2), 0 0 40px rgba(88,141,185,0.3)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'rgba(255,255,255,0.95)'
+          }}
+        >
+          Redefine el Presente.<br/>
+          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+            Conquista el Futuro con IA.
+          </span>
         </h1>
-        <p ref={subtitleRef} className="text-lg md:text-xl text-center max-w-3xl mb-12 text-gray-300">
+        <p 
+          ref={subtitleRef} 
+          className="text-lg md:text-xl text-center max-w-3xl mb-12 font-light tracking-wide"
+          style={{
+            textShadow: '0 0 10px rgba(255,255,255,0.1)',
+            color: 'rgba(255,255,255,0.85)'
+          }}
+        >
           En Datagora diseñamos soluciones de Inteligencia Artificial que impulsan a empresas y usuarios finales hacia un nuevo paradigma de eficiencia y crecimiento.
         </p>
         <button 
           ref={buttonRef} 
-          className="group relative px-8 py-4 bg-transparent border-2 border-blue-500 rounded-full overflow-hidden transition-all duration-300 hover:bg-blue-500/20"
+          className="group relative px-8 py-4 bg-transparent border-2 border-blue-400/50 rounded-full overflow-hidden transition-all duration-300 hover:border-blue-400"
         >
-          <span className="relative z-10 text-lg font-semibold text-white group-hover:text-white transition-colors">
+          <span className="relative z-10 text-lg font-medium text-white/90 group-hover:text-white transition-colors">
             Conoce Cómo
           </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </button>
       </div>
     </section>
