@@ -4,13 +4,15 @@ import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import HyperText from '@/components/ui/hyper-text'
+import RainbowButton from '@/components/ui/rainbow-button'
+import { motion } from 'framer-motion'
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const mouseRef = useRef({ x: 0, y: 0 })
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
-  const buttonRef = useRef<HTMLButtonElement>(null)
+  const buttonRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!canvasRef.current) return
@@ -145,7 +147,7 @@ export default function HeroSection() {
           
           <h1 className="text-5xl md:text-7xl font-black tracking-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
-              REDEFINE
+              REDEFINE{" "} 
             </span>
              EL PRESENTE{" "}
           </h1>
@@ -159,15 +161,17 @@ export default function HeroSection() {
           </h1>
         </div>
 
-        <button 
-          ref={buttonRef} 
-          className="group relative px-8 py-4 mt-12 bg-transparent border-2 border-blue-400/50 rounded-full overflow-hidden transition-all duration-300 hover:border-blue-400"
-        >
-          <span className="relative z-10 text-lg font-medium text-white/90 group-hover:text-white transition-colors">
+        <motion.div ref={buttonRef}>
+          <RainbowButton 
+            className="mt-12 text-lg font-medium"
+            onClick={() => {
+              const nextSection = document.getElementById('solutions')
+              nextSection?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
             Conoce Cómo
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </button>
+          </RainbowButton>
+        </motion.div>
       </div>
     </section>
   )
