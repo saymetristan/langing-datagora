@@ -152,7 +152,18 @@ export default function PortalTransitionSection() {
   return (
     <div 
       ref={containerRef} 
-      className="h-[50vh] relative bg-gradient-to-b from-gray-900 to-black"
+      className="h-[70vh] relative bg-gradient-to-b from-transparent via-gray-900/50 to-black/90"
+      style={{
+        background: `
+          linear-gradient(
+            to bottom,
+            rgba(17, 24, 39, 0) 0%,
+            rgba(17, 24, 39, 0.2) 20%,
+            rgba(17, 24, 39, 0.8) 50%,
+            rgba(0, 0, 0, 0.95) 100%
+          )
+        `
+      }}
     />
   )
 } 
