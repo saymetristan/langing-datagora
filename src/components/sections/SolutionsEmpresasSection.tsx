@@ -4,6 +4,8 @@ import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
+import { IconType } from 'react-icons'
+import { FaRobot, FaWhatsapp, FaFileAlt, FaPhoneAlt, FaUserTie, FaLanguage } from 'react-icons/fa'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,19 +13,21 @@ interface SolutionCardProps {
   title: string
   description: string
   link?: string
+  Icon: IconType
 }
 
-const SolutionCard = ({ title, description, link }: SolutionCardProps) => (
+const SolutionCard = ({ title, description, link, Icon }: SolutionCardProps) => (
   <motion.div 
-    className="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-colors cursor-pointer"
-    whileHover={{ scale: 1.02 }}
+    className="bg-black/40 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all cursor-pointer group"
+    whileHover={{ scale: 1.02, y: -5 }}
     transition={{ type: "spring", stiffness: 300 }}
     onClick={() => link && window.open(link, '_blank')}
   >
-    <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+    <Icon className="text-4xl mb-4 text-blue-400 group-hover:text-purple-400 transition-colors" />
+    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
       {title}
     </h3>
-    <p className="text-gray-300">
+    <p className="text-gray-300 leading-relaxed">
       {description}
     </p>
   </motion.div>
@@ -36,41 +40,48 @@ export default function SolutionsEmpresasSection() {
     {
       title: "ERP Somos Oliver + IA",
       description: "Sistema integral de gestión empresarial potenciado con IA. Optimiza tus operaciones, facturación y control de inventario con inteligencia artificial.",
-      link: "https://somosoliver.com"
+      link: "https://somosoliver.com",
+      Icon: FaRobot
     },
     {
       title: "Agentes IA en Redes Sociales",
-      description: "Asistentes inteligentes que gestionan conversaciones en WhatsApp, Facebook e Instagram. Procesan texto, imágenes y audio para una atención personalizada 24/7."
+      description: "Asistentes inteligentes que gestionan conversaciones en WhatsApp, Facebook e Instagram. Procesan texto, imágenes y audio para una atención personalizada 24/7.",
+      Icon: FaWhatsapp
     },
     {
       title: "Automatización de Contenido",
-      description: "Creación y gestión inteligente de contenido para redes sociales. Generamos posts optimizados para tu audiencia manteniendo tu identidad de marca."
+      description: "Creación y gestión inteligente de contenido para redes sociales. Generamos posts optimizados para tu audiencia manteniendo tu identidad de marca.",
+      Icon: FaFileAlt
     },
     {
       title: "Agente IA para Llamadas",
-      description: "Asistente de voz que maneja llamadas entrantes y salientes. Gestiona ventas, agenda citas y brinda soporte técnico con naturalidad."
+      description: "Asistente de voz que maneja llamadas entrantes y salientes. Gestiona ventas, agenda citas y brinda soporte técnico con naturalidad.",
+      Icon: FaPhoneAlt
     },
     {
       title: "Agente de Prospección Inteligente",
-      description: "Identifica leads potenciales y genera acercamientos personalizados. Analiza datos para crear estrategias de contacto efectivas."
+      description: "Identifica leads potenciales y genera acercamientos personalizados. Analiza datos para crear estrategias de contacto efectivas.",
+      Icon: FaUserTie
     },
     {
       title: "Traducción Masiva Inteligente",
-      description: "Procesamiento de grandes volúmenes de datos en múltiples idiomas. Ideal para catálogos, documentación y contenido internacional."
+      description: "Procesamiento de grandes volúmenes de datos en múltiples idiomas. Ideal para catálogos, documentación y contenido internacional.",
+      Icon: FaLanguage
     }
   ]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".solution-card", {
-        y: 100,
+        y: 50,
         opacity: 0,
-        duration: 0.8,
+        duration: 1,
         stagger: 0.2,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top center",
-          end: "bottom center",
+          start: "top center+=100",
+          end: "center center",
           toggleActions: "play none none reverse"
         }
       })
@@ -86,13 +97,12 @@ export default function SolutionsEmpresasSection() {
       className="min-h-screen bg-gradient-to-b from-black to-gray-900 py-20 px-4"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Soluciones IA Implementadas
+        <h2 className="text-5xl md:text-6xl font-bold text-center mb-6">
+          Soluciones IA para Empresas
         </h2>
-        <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
-          Hemos desarrollado soluciones inteligentes para diversas empresas.
-          <br /><br />
-          ¿Tienes un reto similar? Podemos crear una solución personalizada para ti.
+        <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto flex flex-col gap-6">
+          <span>Impulsa tu negocio con automatizaciones inteligentes que liberan tiempo, reducen costos y multiplican resultados.</span>
+          <span>¿Tienes un reto similar? Podemos crear una solución personalizada para ti.</span>
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
