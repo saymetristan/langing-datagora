@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function DataFlowSection() {
   const containerRef = useRef<HTMLDivElement>(null)
   const timeRef = useRef<number>(0)
+  const opacityRef = useRef<number>(0)
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -25,15 +26,43 @@ export default function DataFlowSection() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     containerRef.current.appendChild(renderer.domElement)
 
+    // Líneas con colores actualizados
+    const lineMaterial = new THREE.LineBasicMaterial({ 
+      color: 0x4f46e5, // Indigo eléctrico
+      transparent: true,
+      opacity: 0
+    })
+
+    // Nodos con gradiente
+    const nodesMaterial = new THREE.ShaderMaterial({
+      uniforms: {
+        time: { value: 0 },
+        opacity: { value: 0 }
+      },
+      vertexShader: `
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform float time;
+        uniform float opacity;
+        varying vec2 vUv;
+        void main() {
+          vec3 color1 = vec3(0.31, 0.27, 0.9);  // Indigo
+          vec3 color2 = vec3(0.93, 0.27, 0.9);  // Magenta
+          vec3 finalColor = mix(color1, color2, sin(time * 0.5) * 0.5 + 0.5);
+          gl_FragColor = vec4(finalColor, opacity);
+        }
+      `,
+      transparent: true
+    })
+
     // Crear líneas de datos
     const linesCount = 50
     const lines: THREE.Line[] = []
-    const lineMaterial = new THREE.LineBasicMaterial({ 
-      color: 0x88ccff,
-      transparent: true,
-      opacity: 0.6
-    })
-
     for (let i = 0; i < linesCount; i++) {
       const points = []
       const segmentCount = Math.floor(Math.random() * 5) + 3
@@ -52,12 +81,6 @@ export default function DataFlowSection() {
 
     // Crear nodos de datos
     const nodesGeometry = new THREE.SphereGeometry(0.05, 16, 16)
-    const nodesMaterial = new THREE.MeshBasicMaterial({
-      color: 0xff88ff,
-      transparent: true,
-      opacity: 0.8
-    })
-
     const nodes: THREE.Mesh[] = []
     const nodesCount = 100
     
@@ -74,9 +97,27 @@ export default function DataFlowSection() {
 
     camera.position.z = 5
 
+    // Animaciones de entrada/salida con ScrollTrigger
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1,
+        onUpdate: (self) => {
+          const progress = self.progress
+          const opacity = Math.sin(progress * Math.PI)
+          opacityRef.current = opacity
+          lineMaterial.opacity = opacity
+          nodesMaterial.uniforms.opacity.value = opacity
+        }
+      }
+    })
+
     const animate = () => {
       requestAnimationFrame(animate)
       timeRef.current += 0.005
+      nodesMaterial.uniforms.time.value = timeRef.current
 
       // Animar líneas
       lines.forEach((line, i) => {
@@ -99,19 +140,6 @@ export default function DataFlowSection() {
 
     animate()
 
-    // Animación al scroll
-    gsap.to(camera.position, {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 1,
-      },
-      z: 3,
-      y: 1,
-      ease: 'none',
-    })
-
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight
       camera.updateProjectionMatrix()
@@ -129,7 +157,7 @@ export default function DataFlowSection() {
   return (
     <div 
       ref={containerRef} 
-      className="h-screen relative bg-gradient-to-b from-black via-gray-900 to-black"
+      className="h-screen relative bg-gradient-to-b from-black via-gray-900/50 to-black"
     />
   )
 } 
