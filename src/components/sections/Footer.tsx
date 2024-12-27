@@ -26,9 +26,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo y descripción */}
           <div>
-            <h3 className={`${spaceGrotesk.className} text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text mb-4`}>
-              Datagora
-            </h3>
+            <Link href="/">
+              <h3 className={`${spaceGrotesk.className} text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text mb-4`}>
+                Datagora
+              </h3>
+            </Link>
             <p className="text-gray-400">
               Transformando el presente con soluciones de IA que definen el futuro.
             </p>
