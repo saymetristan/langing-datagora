@@ -1,6 +1,6 @@
 import HeroSection from '../components/sections/HeroSection'
 import SolutionsEmpresasSection from '../components/sections/SolutionsEmpresasSection'
-import TransitionSection from '../components/sections/TransitionSection'
+import WarpTransitionSection from '../components/sections/WarpTransitionSection'
 import SolutionsUsuariosSection from '../components/sections/SolutionsUsuariosSection'
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <SolutionsEmpresasSection />
-      <TransitionSection />
+      <WarpTransitionSection />
       <SolutionsUsuariosSection />
     </main>
   )
