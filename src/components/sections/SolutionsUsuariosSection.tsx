@@ -112,7 +112,7 @@ export default function SolutionsUsuariosSection() {
       className="min-h-screen bg-gradient-to-b from-gray-900 to-black py-20 px-4"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className={`${spaceGrotesk.className} text-5xl md:text-6xl font-bold text-center mb-6`}>
+        <h2 className={`${spaceGrotesk.className} text-5xl md:text-6xl font-bold text-center mb-6 text-white`}>
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
             Soluciones IA
           </span>
