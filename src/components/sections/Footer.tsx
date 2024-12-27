@@ -2,7 +2,7 @@
 
 import { Space_Grotesk } from 'next/font/google'
 import Link from 'next/link'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
