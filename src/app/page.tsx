@@ -5,7 +5,6 @@ import TechStackSection from '../components/sections/TechStackSection'
 import ImpactSection from '../components/sections/ImpactSection'
 import CTASection from '../components/sections/CTASection'
 import TransitionOverlay from '../components/sections/TransitionOverlay'
-import Footer from '../components/sections/Footer'
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <TechStackSection />
       <ImpactSection />
       <CTASection />
-      <Footer />
     </main>
   )
 }
