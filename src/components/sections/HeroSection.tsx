@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import gsap from 'gsap'
+import HyperText from '@/components/ui/hyper-text'
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -131,21 +132,27 @@ export default function HeroSection() {
       <canvas ref={canvasRef} className="absolute inset-0" />
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/70" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
-        <h1 
-          ref={titleRef} 
-          className="text-5xl md:text-7xl font-bold text-center mb-6 tracking-tight"
-          style={{
-            textShadow: '0 0 20px rgba(255,255,255,0.2), 0 0 40px rgba(88,141,185,0.3)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            color: 'rgba(255,255,255,0.95)'
-          }}
-        >
-          Redefine el Presente.<br/>
-          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+        <div ref={titleRef} className="text-5xl md:text-7xl font-bold text-center mb-6">
+          <HyperText 
+            className="text-white/95"
+            duration={800}
+            delay={500}
+            startOnView={true}
+            animateOnHover={true}
+          >
+            Redefine el Presente.
+          </HyperText>
+          <br/>
+          <HyperText 
+            className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text"
+            duration={800}
+            delay={800}
+            startOnView={true}
+            animateOnHover={true}
+          >
             Conquista el Futuro con IA.
-          </span>
-        </h1>
+          </HyperText>
+        </div>
         <p 
           ref={subtitleRef} 
           className="text-lg md:text-xl text-center max-w-3xl mb-12 font-light tracking-wide"
