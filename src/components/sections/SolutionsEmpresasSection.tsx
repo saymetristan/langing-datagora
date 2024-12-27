@@ -10,9 +10,10 @@ gsap.registerPlugin(ScrollTrigger)
 interface SolutionCardProps {
   title: string
   description: string
+  link?: string
 }
 
-const SolutionCard = ({ title, description }: SolutionCardProps) => (
+const SolutionCard = ({ title, description, link }: SolutionCardProps) => (
   <motion.div 
     className="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-colors"
     whileHover={{ scale: 1.02 }}
@@ -24,6 +25,11 @@ const SolutionCard = ({ title, description }: SolutionCardProps) => (
     <p className="text-gray-300">
       {description}
     </p>
+    {link && (
+      <a href={link} className="text-sm text-gray-500 hover:text-gray-300">
+        Ver más
+      </a>
+    )}
   </motion.div>
 )
 
@@ -32,24 +38,29 @@ export default function SolutionsEmpresasSection() {
 
   const solutions = [
     {
-      title: "Agente de Prospección Inteligente",
-      description: "Investiga leads, redacta correos en frío hiperpersonalizados y acelera tus ventas."
+      title: "ERP Somos Oliver + IA",
+      description: "Sistema integral de gestión empresarial potenciado con IA. Optimiza tus operaciones, facturación y control de inventario con inteligencia artificial.",
+      link: "https://somosoliver.com"
     },
     {
-      title: "Traducción Masiva de Excel",
-      description: "Procesa miles de líneas en segundos sin perder precisión."
+      title: "Agentes IA en Redes Sociales",
+      description: "Asistentes inteligentes que gestionan conversaciones en WhatsApp, Facebook e Instagram. Procesan texto, imágenes y audio para una atención personalizada 24/7."
     },
     {
       title: "Automatización de Contenido",
-      description: "Genera y publica posts en redes al instante, optimizados para tu audiencia."
+      description: "Creación y gestión inteligente de contenido para redes sociales. Generamos posts optimizados para tu audiencia manteniendo tu identidad de marca."
     },
     {
-      title: "Agentes de Venta 24/7",
-      description: "Atención constante y cerrando ventas sin interrupciones en WhatsApp, Facebook, Instagram y Llamadas."
+      title: "Agente IA para Llamadas",
+      description: "Asistente de voz que maneja llamadas entrantes y salientes. Gestiona ventas, agenda citas y brinda soporte técnico con naturalidad."
     },
     {
-      title: "ERP Somos Oliver + IA",
-      description: "Integra IA en la gestión de tu negocio para facturar, organizar e impulsar resultados."
+      title: "Agente de Prospección Inteligente",
+      description: "Identifica leads potenciales y genera acercamientos personalizados. Analiza datos para crear estrategias de contacto efectivas."
+    },
+    {
+      title: "Traducción Masiva Inteligente",
+      description: "Procesamiento de grandes volúmenes de datos en múltiples idiomas. Ideal para catálogos, documentación y contenido internacional."
     }
   ]
 
