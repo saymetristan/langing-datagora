@@ -144,16 +144,16 @@ export default function HeroSection() {
           </HyperText>
           
           <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-            REDEFINE{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
-              EL PRESENTE
+              REDEFINE
             </span>
+             EL PRESENTE{" "}
           </h1>
           
           <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-            CONQUISTA{" "}
+            CONQUISTA EL{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
-              EL FUTURO
+                FUTURO
             </span>
             {" "}CON IA
           </h1>
