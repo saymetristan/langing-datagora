@@ -6,8 +6,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
 import { IconType } from 'react-icons'
 import { FaRobot, FaWhatsapp, FaFileAlt, FaPhoneAlt, FaUserTie, FaLanguage } from 'react-icons/fa'
+import { Space_Grotesk } from 'next/font/google'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ['latin'],
+  weight: ['700']
+})
 
 interface SolutionCardProps {
   title: string
@@ -18,16 +24,17 @@ interface SolutionCardProps {
 
 const SolutionCard = ({ title, description, link, Icon }: SolutionCardProps) => (
   <motion.div 
-    className="bg-black/40 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all cursor-pointer group"
+    className="bg-black/40 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all cursor-pointer group relative overflow-hidden"
     whileHover={{ scale: 1.02, y: -5 }}
     transition={{ type: "spring", stiffness: 300 }}
     onClick={() => link && window.open(link, '_blank')}
   >
-    <Icon className="text-4xl mb-4 text-blue-400 group-hover:text-purple-400 transition-colors" />
-    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+    <Icon className="text-5xl mb-6 text-blue-400 group-hover:text-purple-400 transition-colors" />
+    <h3 className={`${spaceGrotesk.className} text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text`}>
       {title}
     </h3>
-    <p className="text-gray-300 leading-relaxed">
+    <p className="text-gray-300 leading-relaxed text-lg">
       {description}
     </p>
   </motion.div>
@@ -72,12 +79,7 @@ export default function SolutionsEmpresasSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".solution-card", {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top center+=100",
@@ -85,6 +87,26 @@ export default function SolutionsEmpresasSection() {
           toggleActions: "play none none reverse"
         }
       })
+
+      tl.from("h2", {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      })
+      .from("p", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.4")
+      .from(".solution-card", {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out"
+      }, "-=0.4")
     }, sectionRef)
 
     return () => ctx.revert()
@@ -97,8 +119,11 @@ export default function SolutionsEmpresasSection() {
       className="min-h-screen bg-gradient-to-b from-black to-gray-900 py-20 px-4"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-6">
-          Soluciones IA para Empresas
+        <h2 className={`${spaceGrotesk.className} text-5xl md:text-6xl font-bold text-center mb-6`}>
+          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+            Soluciones IA
+          </span>
+          {" "}para Empresas
         </h2>
         <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto flex flex-col gap-6">
           <span>Impulsa tu negocio con automatizaciones inteligentes que liberan tiempo, reducen costos y multiplican resultados.</span>
