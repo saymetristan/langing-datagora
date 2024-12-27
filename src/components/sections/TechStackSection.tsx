@@ -75,46 +75,48 @@ export default function TechStackSection() {
         </p>
       </div>
 
-      <div className="relative h-[500px] w-full max-w-3xl mx-auto">
-        {/* Inner Circle */}
-        {technologies.inner.map((tech, i) => (
-          <OrbitingCircles
-            key={tech.name}
-            className="size-16 border-none bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-colors"
-            duration={20}
-            delay={i * 7}
-            radius={80}
-          >
-            <tech.Icon className="size-8 text-blue-400" />
-          </OrbitingCircles>
-        ))}
+      <div className="relative h-[500px] w-full max-w-3xl mx-auto flex items-center justify-center">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          {/* Inner Circle */}
+          {technologies.inner.map((tech, i) => (
+            <OrbitingCircles
+              key={tech.name}
+              className="size-16 border-none bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-colors"
+              duration={20}
+              delay={i * 7}
+              radius={80}
+            >
+              <tech.Icon className="size-8 text-blue-400" />
+            </OrbitingCircles>
+          ))}
 
-        {/* Middle Circle */}
-        {technologies.middle.map((tech, i) => (
-          <OrbitingCircles
-            key={tech.name}
-            className="size-16 border-none bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-colors"
-            duration={25}
-            delay={i * 8}
-            radius={160}
-          >
-            <tech.Icon className="size-8 text-purple-400" />
-          </OrbitingCircles>
-        ))}
+          {/* Middle Circle */}
+          {technologies.middle.map((tech, i) => (
+            <OrbitingCircles
+              key={tech.name}
+              className="size-16 border-none bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-colors"
+              duration={25}
+              delay={i * 8}
+              radius={160}
+            >
+              <tech.Icon className="size-8 text-purple-400" />
+            </OrbitingCircles>
+          ))}
 
-        {/* Outer Circle */}
-        {technologies.outer.map((tech, i) => (
-          <OrbitingCircles
-            key={tech.name}
-            className="size-16 border-none bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-colors"
-            duration={30}
-            delay={i * 10}
-            radius={240}
-            reverse
-          >
-            <tech.Icon className="size-8 text-cyan-400" />
-          </OrbitingCircles>
-        ))}
+          {/* Outer Circle */}
+          {technologies.outer.map((tech, i) => (
+            <OrbitingCircles
+              key={tech.name}
+              className="size-16 border-none bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-colors"
+              duration={30}
+              delay={i * 10}
+              radius={240}
+              reverse
+            >
+              <tech.Icon className="size-8 text-cyan-400" />
+            </OrbitingCircles>
+          ))}
+        </div>
       </div>
     </section>
   )
