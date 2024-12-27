@@ -55,8 +55,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contacto</h4>
             <p className="text-gray-400 mb-4">
-              contacto@datagora.com<br />
-              +34 900 123 456
+              contacto@datagora.mx<br />
+              +52 (813) 969 2995
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
