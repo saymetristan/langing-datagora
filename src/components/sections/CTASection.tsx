@@ -92,7 +92,7 @@ export default function CTASection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-screen bg-gray-900 flex flex-col items-center justify-center py-20 pb-40 px-4">
       <canvas 
         ref={canvasRef} 
         className="absolute inset-0 w-full h-full -z-10"
@@ -103,7 +103,7 @@ export default function CTASection() {
           El Futuro se Construye Hoy
         </h2>
         
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-800 text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
           Toma la delantera y conviértete en el referente de tu industria con soluciones IA de Datagora.
         </p>
         
