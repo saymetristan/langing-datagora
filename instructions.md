@@ -53,14 +53,14 @@ La web será **una experiencia inmersiva** que combine diseños 3D creados con T
    - **Texto Principal**: “Casos de Éxito y Resultados Reales”  
    - **Subtexto**: *“Desde el aumento de ventas hasta la transformación de la experiencia de usuario, hemos generado valor tangible en cada proyecto.”*  
    - **Ejemplos de Métricas** (con animaciones de conteo incremental):  
-     - “+30% en Ventas con Agentes de Prospección Inteligente”  
-     - “+40% de Eficiencia al Clasificar Imágenes en Eventos Deportivos”  
-     - “+50% de Apertura en Campañas de Email Hiperpersonalizadas”  
+     - “+31% en Ventas con Agentes de Prospección Inteligente”  
+     - “+48% de Eficiencia al Clasificar Imágenes en Eventos Deportivos”  
+     - “+62% de Apertura en Campañas de Email Hiperpersonalizadas”  
 
 5. **Sección CTA Final**  
    - **Título**: “El Futuro se Construye Hoy”  
    - **Subtexto**: *“Toma la delantera y conviértete en el referente de tu industria con soluciones IA de Datagora.”*  
-   - **Botón CTA**: “Agenda una Demo”  
+   - **Botón CTA**: “Charlemos  
    - **Fondo 3D**: Podría mostrar un ambiente futurista en movimiento, cerrando con un broche de oro la experiencia inmersiva.
 
 6. **Footer**  

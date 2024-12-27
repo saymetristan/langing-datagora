@@ -17,48 +17,54 @@ export default function TechStackSection() {
         Nuestro Stack
       </h2>
 
-      <div className="relative w-full max-w-4xl aspect-square">
-        {/* Círculo interior */}
-        <OrbitingCircles className="size-[40px] text-blue-400" duration={20} radius={100}>
-          <SiOpenai className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-purple-400" duration={20} delay={3} radius={100}>
-          <SiHuggingface className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-cyan-400" duration={20} delay={6} radius={100}>
-          <SiMeta className="w-8 h-8" />
-        </OrbitingCircles>
-        
-        {/* Círculo medio */}
-        <OrbitingCircles className="size-[40px] text-purple-400" duration={22} radius={150}>
-          <SiElevenlabs className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-cyan-400" duration={22} delay={4} radius={150}>
-          <SiSupabase className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-blue-400" duration={22} delay={8} radius={150}>
-          <SiRedis className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-purple-400" duration={22} delay={12} radius={150}>
-          <SiPostgresql className="w-8 h-8" />
-        </OrbitingCircles>
+      <div className="relative w-full max-w-4xl aspect-square flex items-center justify-center">
+        <span className="absolute pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent z-10">
+          Magic UI
+        </span>
 
-        {/* Círculo exterior */}
-        <OrbitingCircles className="size-[40px] text-cyan-400" radius={200} duration={25} reverse>
-          <FaPython className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-blue-400" radius={200} duration={25} delay={5} reverse>
-          <FaNode className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-purple-400" radius={200} duration={25} delay={10} reverse>
-          <SiNextdotjs className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-cyan-400" radius={200} duration={25} delay={15} reverse>
-          <FaReact className="w-8 h-8" />
-        </OrbitingCircles>
-        <OrbitingCircles className="size-[40px] text-blue-400" radius={200} duration={25} delay={20} reverse>
-          <FaAws className="w-8 h-8" />
-        </OrbitingCircles>
+        <div className="absolute inset-0">
+          {/* Círculo interior */}
+          <OrbitingCircles className="size-[40px] text-blue-400" duration={20} radius={100}>
+            <SiOpenai className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-purple-400" duration={20} delay={3} radius={100}>
+            <SiHuggingface className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-cyan-400" duration={20} delay={6} radius={100}>
+            <SiMeta className="w-8 h-8" />
+          </OrbitingCircles>
+          
+          {/* Círculo medio */}
+          <OrbitingCircles className="size-[40px] text-purple-400" duration={22} radius={150}>
+            <SiElevenlabs className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-cyan-400" duration={22} delay={4} radius={150}>
+            <SiSupabase className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-blue-400" duration={22} delay={8} radius={150}>
+            <SiRedis className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-purple-400" duration={22} delay={12} radius={150}>
+            <SiPostgresql className="w-8 h-8" />
+          </OrbitingCircles>
+
+          {/* Círculo exterior */}
+          <OrbitingCircles className="size-[40px] text-cyan-400" radius={200} duration={25} reverse>
+            <FaPython className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-blue-400" radius={200} duration={25} delay={5} reverse>
+            <FaNode className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-purple-400" radius={200} duration={25} delay={10} reverse>
+            <SiNextdotjs className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-cyan-400" radius={200} duration={25} delay={15} reverse>
+            <FaReact className="w-8 h-8" />
+          </OrbitingCircles>
+          <OrbitingCircles className="size-[40px] text-blue-400" radius={200} duration={25} delay={20} reverse>
+            <FaAws className="w-8 h-8" />
+          </OrbitingCircles>
+        </div>
       </div>
     </div>
   )
