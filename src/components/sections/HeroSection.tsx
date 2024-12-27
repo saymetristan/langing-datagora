@@ -6,6 +6,12 @@ import gsap from 'gsap'
 import HyperText from '@/components/ui/hyper-text'
 import RainbowButton from '@/components/ui/rainbow-button'
 import { motion } from 'framer-motion'
+import { Space_Grotesk } from 'next/font/google'
+
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ['latin'],
+  weight: ['700']
+})
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -136,7 +142,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
         <div ref={titleRef} className="flex flex-col gap-6 text-center">
           <HyperText 
-            className="text-5xl md:text-7xl font-black tracking-wider"
+            className="text-6xl md:text-8xl font-black tracking-wider"
             duration={800}
             delay={300}
             startOnView={true}
@@ -145,14 +151,14 @@ export default function HeroSection() {
             DATAGORA
           </HyperText>
           
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+          <h1 className={`${spaceGrotesk.className} text-4xl md:text-6xl font-black tracking-tight`}>
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
               REDEFINE{" "} 
             </span>
              EL PRESENTE{" "}
           </h1>
           
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+          <h1 className={`${spaceGrotesk.className} text-4xl md:text-6xl font-black tracking-tight`}>
             CONQUISTA EL{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
                 FUTURO
@@ -163,13 +169,13 @@ export default function HeroSection() {
 
         <motion.div ref={buttonRef}>
           <RainbowButton 
-            className="mt-12 text-lg font-medium"
+            className={`${spaceGrotesk.className} mt-12 text-lg font-bold tracking-wide`}
             onClick={() => {
               const nextSection = document.getElementById('solutions')
               nextSection?.scrollIntoView({ behavior: 'smooth' })
             }}
           >
-            Conoce Cómo
+            CONOCE CÓMO
           </RainbowButton>
         </motion.div>
       </div>
