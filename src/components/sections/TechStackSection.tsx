@@ -75,7 +75,7 @@ export default function TechStackSection() {
         </p>
       </div>
 
-      <div className="relative h-[500px] w-full max-w-3xl">
+      <div className="relative h-[500px] w-full max-w-3xl mx-auto">
         {/* Inner Circle */}
         {technologies.inner.map((tech, i) => (
           <OrbitingCircles
