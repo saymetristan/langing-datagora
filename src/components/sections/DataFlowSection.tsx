@@ -72,6 +72,59 @@ export default function DataFlowSection() {
       scene.add(line)
     }
 
+    const nodesCount = window.innerWidth < 768 ? 50 : 100
+    const nodesGeometry = new THREE.SphereGeometry(0.05, 16, 16)
+    const nodesMaterial = new THREE.ShaderMaterial({
+      uniforms: {
+        time: { value: 0 },
+        opacity: { value: 0 }
+      },
+      vertexShader: `
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform float time;
+        uniform float opacity;
+        varying vec2 vUv;
+        void main() {
+          vec3 color1 = vec3(0.31, 0.27, 0.9);  // Azul eléctrico
+          vec3 color2 = vec3(0.93, 0.27, 0.9);  // Morado neón
+          vec3 color3 = vec3(0.27, 0.9, 0.31);  // Verde cibernético
+          
+          float t = mod(time * 0.5, 3.0);
+          vec3 finalColor;
+          
+          if(t < 1.0) {
+            finalColor = mix(color1, color2, t);
+          } else if(t < 2.0) {
+            finalColor = mix(color2, color3, t - 1.0);
+          } else {
+            finalColor = mix(color3, color1, t - 2.0);
+          }
+          
+          float glow = (1.0 - length(vUv - 0.5) * 2.0);
+          gl_FragColor = vec4(finalColor, opacity * glow);
+        }
+      `,
+      transparent: true
+    })
+
+    const nodes: THREE.Mesh[] = []
+    for (let i = 0; i < nodesCount; i++) {
+      const node = new THREE.Mesh(nodesGeometry, nodesMaterial)
+      node.position.set(
+        (Math.random() - 0.5) * 10,
+        (Math.random() - 0.5) * 10,
+        (Math.random() - 0.5) * 10
+      )
+      nodes.push(node)
+      scene.add(node)
+    }
+
     camera.position.z = 5
 
     const animate = () => {
@@ -83,6 +136,12 @@ export default function DataFlowSection() {
         line.rotation.x = Math.sin(timeRef.current + i) * 0.1
         line.rotation.y = Math.cos(timeRef.current + i) * 0.1
       })
+
+      nodes.forEach((node, i) => {
+        node.position.y += Math.sin(timeRef.current + i) * 0.002
+        node.position.x += Math.cos(timeRef.current + i * 0.5) * 0.002
+      })
+      nodesMaterial.uniforms.time.value = timeRef.current
 
       renderer.render(scene, camera)
     }
