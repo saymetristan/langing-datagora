@@ -7,17 +7,17 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function PrivacyPolicy() {
   return (
-    <main className='min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-300'>
-      <div className='max-w-4xl mx-auto px-4 py-20'>
+    <main className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-300">
+      <div className="max-w-4xl mx-auto px-4 py-20">
         <h1 className={`${spaceGrotesk.className} text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text`}>
           Aviso de Privacidad
         </h1>
         
-        <div className='prose prose-invert max-w-none'>
-          <p className='text-gray-400 mb-8'>Última actualización: Marzo 04, 2024</p>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-gray-400 mb-8">Última actualización: &quot;Marzo 04, 2024&quot;</p>
 
-          <p className='mb-8'>
-            En Datagora Inteligencia Digital S.A.S. de C.V. (en adelante, 'Datagora'), estamos comprometidos con la protección de los datos personales de nuestros clientes, proveedores y cualquier persona que interactúe con nosotros. Este Aviso de Privacidad se emite en cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su reglamento.
+          <p className="mb-8">
+            En Datagora Inteligencia Digital S.A.S. de C.V. (en adelante, &quot;Datagora&quot;), estamos comprometidos con la protección de los datos personales de nuestros clientes, proveedores y cualquier persona que interactúe con nosotros. Este Aviso de Privacidad se emite en cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su reglamento.
           </p>
 
           <h2 className={`${spaceGrotesk.className} text-2xl font-bold mt-12 mb-4 text-white`}>
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
             2. Datos Personales que Recabamos
           </h2>
           <p>Podremos recabar los siguientes datos personales:</p>
-          <ul className='list-disc pl-6 mt-4 space-y-2'>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>Datos de identificación: Nombre completo, domicilio, teléfono, correo electrónico.</li>
             <li>Datos fiscales: RFC, razón social, información de facturación.</li>
             <li>Datos financieros: Información bancaria y métodos de pago, cuando sea necesario para la prestación de servicios.</li>
@@ -40,10 +40,10 @@ export default function PrivacyPolicy() {
             <li>Datos de navegación: Tipo de navegador, sistema operativo, páginas visitadas, tiempo de navegación, dirección IP, y ubicación geográfica.</li>
           </ul>
 
-          <p className='mt-6'>
+          <p className="mt-6">
             En ciertos casos, Datagora podrá recibir datos personales de terceros, como socios comerciales o proveedores. Estos datos se utilizarán exclusivamente para los fines establecidos en este Aviso de Privacidad y se protegerán conforme a nuestras políticas de seguridad.
           </p>
-          <p className='mt-4'>
+          <p className="mt-4">
             No recabamos datos personales sensibles. Solicitamos abstenerse de proporcionar datos relacionados con origen étnico, opiniones políticas, creencias religiosas, afiliaciones sindicales, salud, orientación sexual, o antecedentes penales.
           </p>
 
@@ -51,14 +51,14 @@ export default function PrivacyPolicy() {
             3. Finalidades del Tratamiento de Datos
           </h2>
           <p>Los datos personales que recabamos serán utilizados para las siguientes finalidades:</p>
-          <p className='font-bold mt-4'>Primarias:</p>
-          <ul className='list-disc pl-6 mt-2 space-y-2'>
+          <p className="font-bold mt-4">Primarias:</p>
+          <ul className="list-disc pl-6 mt-2 space-y-2">
             <li>Proveer los servicios contratados, incluyendo desarrollo de software y soluciones de inteligencia artificial.</li>
             <li>Emitir facturas y cumplir con obligaciones fiscales.</li>
             <li>Contactar al Cliente para cuestiones relacionadas con el proyecto o servicio.</li>
           </ul>
-          <p className='font-bold mt-4'>Secundarias:</p>
-          <ul className='list-disc pl-6 mt-2 space-y-2'>
+          <p className="font-bold mt-4">Secundarias:</p>
+          <ul className="list-disc pl-6 mt-2 space-y-2">
             <li>Realizar estudios de mercado y encuestas de satisfacción.</li>
             <li>Enviar información sobre nuevos servicios, promociones o eventos relacionados con Datagora.</li>
           </ul>
@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
           <p>
             Datagora no compartirá, venderá ni transferirá sus datos personales a terceros sin su consentimiento previo, salvo en los siguientes casos:
           </p>
-          <ul className='list-disc pl-6 mt-4 space-y-2'>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>Cuando sea necesario para el cumplimiento de obligaciones legales.</li>
             <li>Cuando sea requerido por autoridades competentes.</li>
             <li>Para la ejecución de proyectos que involucren a terceros contratados por Datagora, bajo estrictas obligaciones de confidencialidad.</li>
@@ -81,7 +81,7 @@ export default function PrivacyPolicy() {
           <p>
             Implementamos medidas de seguridad administrativas, físicas y técnicas para proteger sus datos personales contra pérdida, robo, acceso no autorizado, uso indebido o alteración. Estas medidas incluyen:
           </p>
-          <ul className='list-disc pl-6 mt-4 space-y-2'>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>Control de acceso restringido a la información.</li>
             <li>Uso de tecnologías seguras para el almacenamiento y transmisión de datos.</li>
             <li>Capacitación periódica a nuestro personal sobre protección de datos personales.</li>
@@ -93,11 +93,11 @@ export default function PrivacyPolicy() {
           <p>
             El Cliente tiene derecho a Acceder, Rectificar, Cancelar u Oponerse (ARCO) al tratamiento de sus datos personales. Para ejercer cualquiera de estos derechos, podrá enviar una solicitud a:
           </p>
-          <p className='mt-4'>Correo Electrónico: contacto@datagora.mx</p>
+          <p className="mt-4">Correo Electrónico: contacto@datagora.mx</p>
           <p>Teléfono: +52 (556) 429 9653</p>
 
-          <p className='mt-6'>La solicitud deberá incluir:</p>
-          <ul className='list-disc pl-6 mt-4 space-y-2'>
+          <p className="mt-6">La solicitud deberá incluir:</p>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>Nombre completo del titular.</li>
             <li>Descripción clara del derecho que desea ejercer.</li>
             <li>Documentación que acredite su identidad o representación legal.</li>
@@ -109,7 +109,7 @@ export default function PrivacyPolicy() {
           <p>
             Nuestro sitio web podrá utilizar cookies y otras tecnologías para mejorar la experiencia del usuario. Estas herramientas recaban datos como:
           </p>
-          <ul className='list-disc pl-6 mt-4 space-y-2'>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>Tipo de navegador y sistema operativo.</li>
             <li>Páginas visitadas.</li>
             <li>Tiempo de navegación.</li>
@@ -117,16 +117,16 @@ export default function PrivacyPolicy() {
             <li>Ubicación geográfica.</li>
           </ul>
 
-          <p className='font-bold mt-6'>Categorías de Cookies que Utilizamos:</p>
-          <ol className='list-decimal pl-6 mt-4 space-y-4'>
+          <p className="font-bold mt-6">Categorías de Cookies que Utilizamos:</p>
+          <ol className="list-decimal pl-6 mt-4 space-y-4">
             <li>
-              <span className='font-bold'>Cookies de funcionalidad:</span> Permiten recordar las preferencias del usuario y proporcionar una experiencia personalizada sin rastrear actividad fuera del sitio web.
+              <span className="font-bold">Cookies de funcionalidad:</span> Permiten recordar las preferencias del usuario y proporcionar una experiencia personalizada sin rastrear actividad fuera del sitio web.
             </li>
             <li>
-              <span className='font-bold'>Cookies de rendimiento:</span> Recaban información sobre cómo los visitantes utilizan el sitio web, como las páginas visitadas y el tiempo de permanencia, para mejorar su rendimiento.
+              <span className="font-bold">Cookies de rendimiento:</span> Recaban información sobre cómo los visitantes utilizan el sitio web, como las páginas visitadas y el tiempo de permanencia, para mejorar su rendimiento.
             </li>
             <li>
-              <span className='font-bold'>Cookies de publicidad:</span> Usadas para mostrar anuncios relevantes y medir la efectividad de las campañas publicitarias.
+              <span className="font-bold">Cookies de publicidad:</span> Usadas para mostrar anuncios relevantes y medir la efectividad de las campañas publicitarias.
             </li>
           </ol>
 
@@ -155,13 +155,13 @@ export default function PrivacyPolicy() {
             11. Contacto
           </h2>
           <p>Para dudas o comentarios sobre este Aviso de Privacidad, puede comunicarse con nosotros a:</p>
-          <ul className='list-disc pl-6 mt-4 space-y-2'>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>Correo Electrónico: contacto@datagora.mx</li>
             <li>Teléfono: +52 (556) 429 9653</li>
             <li>Dirección: Fracc. Desarrollo, Blvd. Antonio Rocha Cordero, Del Pedregal 157-D201, 78295 San Luis Potosí, S.L.P.</li>
           </ul>
 
-          <p className='mt-8 text-sm text-gray-400'>
+          <p className="mt-8 text-sm text-gray-400">
             Al proporcionar sus datos personales a Datagora, usted manifiesta su conformidad con los términos y condiciones establecidos en este Aviso de Privacidad.
           </p>
         </div>

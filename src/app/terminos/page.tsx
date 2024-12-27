@@ -7,17 +7,17 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function TermsAndConditions() {
   return (
-    <main className='min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-300'>
-      <div className='max-w-4xl mx-auto px-4 py-20'>
+    <main className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-300">
+      <div className="max-w-4xl mx-auto px-4 py-20">
         <h1 className={`${spaceGrotesk.className} text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text`}>
           Términos y Condiciones
         </h1>
         
-        <div className='prose prose-invert max-w-none'>
-          <p className='text-gray-400 mb-8'>Última actualización: Marzo 04, 2024</p>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-gray-400 mb-8">Última actualización: &quot;Marzo 04, 2024&quot;</p>
 
-          <p className='mb-8'>
-            Estos Términos y Condiciones (en adelante, los 'Términos') regulan la relación contractual entre Datagora Inteligencia Digital S.A.S. de C.V. (en adelante, 'Datagora') y el cliente (en adelante, el 'Cliente'), respecto a los servicios de desarrollo de software y soluciones de inteligencia artificial proporcionados por Datagora. Al contratar los servicios de Datagora, el Cliente acepta plenamente los presentes Términos, los cuales constituyen un acuerdo legal vinculante.
+          <p className="mb-8">
+            Estos Términos y Condiciones (en adelante, los &quot;Términos&quot;) regulan la relación contractual entre Datagora Inteligencia Digital S.A.S. de C.V. (en adelante, &quot;Datagora&quot;) y el cliente (en adelante, el &quot;Cliente&quot;), respecto a los servicios de desarrollo de software y soluciones de inteligencia artificial proporcionados por Datagora. Al contratar los servicios de Datagora, el Cliente acepta plenamente los presentes Términos, los cuales constituyen un acuerdo legal vinculante.
           </p>
 
           <h2 className={`${spaceGrotesk.className} text-2xl font-bold mt-12 mb-4 text-white`}>
