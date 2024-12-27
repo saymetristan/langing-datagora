@@ -8,7 +8,7 @@ type CharacterSet = string[] | readonly string[];
 
 interface HyperTextProps extends MotionProps {
   /** The text content to be animated */
-  children: string;
+  children: React.ReactNode;
   /** Optional className for styling */
   className?: string;
   /** Duration of the animation in milliseconds */
@@ -46,8 +46,10 @@ export default function HyperText({
     forwardMotionProps: true,
   });
 
+  const textContent = typeof children === 'string' ? children : '';
+  
   const [displayText, setDisplayText] = useState<string[]>(() =>
-    children.split(""),
+    textContent.split("")
   );
   const [isAnimating, setIsAnimating] = useState(false);
   const iterationCount = useRef(0);
@@ -91,9 +93,10 @@ export default function HyperText({
   // Handle scramble animation
   useEffect(() => {
     if (!isAnimating) return;
+    if (!textContent) return;
 
-    const intervalDuration = duration / (children.length * 10);
-    const maxIterations = children.length;
+    const intervalDuration = duration / (textContent.length * 10);
+    const maxIterations = textContent.length;
 
     const interval = setInterval(() => {
       if (iterationCount.current < maxIterations) {
@@ -102,7 +105,7 @@ export default function HyperText({
             letter === " "
               ? letter
               : index <= iterationCount.current
-                ? children[index]
+                ? textContent[index]
                 : characterSet[getRandomInt(characterSet.length)],
           ),
         );
@@ -114,12 +117,12 @@ export default function HyperText({
     }, intervalDuration);
 
     return () => clearInterval(interval);
-  }, [children, duration, isAnimating, characterSet]);
+  }, [textContent, duration, isAnimating, characterSet]);
 
   return (
     <MotionComponent
       ref={elementRef}
-      className={cn("overflow-hidden py-2 text-4xl font-bold", className)}
+      className={cn("overflow-hidden py-2", className)}
       onMouseEnter={handleAnimationTrigger}
       {...props}
     >

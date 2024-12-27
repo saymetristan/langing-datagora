@@ -132,40 +132,43 @@ export default function HeroSection() {
       <canvas ref={canvasRef} className="absolute inset-0" />
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/70" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
-        <div ref={titleRef} className="text-5xl md:text-7xl font-bold text-center mb-6">
+        <div ref={titleRef} className="flex flex-col gap-4 text-center">
           <HyperText 
-            className="text-white/95"
+            className="text-4xl md:text-5xl font-black tracking-wider"
             duration={800}
-            delay={500}
+            delay={300}
             startOnView={true}
             animateOnHover={true}
           >
-            Redefine el Presente.
+            DATAGORA
           </HyperText>
-          <br/>
-          <HyperText 
-            className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text"
-            duration={800}
-            delay={800}
-            startOnView={true}
-            animateOnHover={true}
-          >
-            Conquista el Futuro con IA.
-          </HyperText>
+          
+          <div className="text-5xl md:text-7xl font-extrabold tracking-tight">
+            <HyperText duration={800} delay={500}>
+              Redefine
+            </HyperText>
+            {" "}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+              el presente
+            </span>
+          </div>
+          
+          <div className="text-5xl md:text-7xl font-extrabold tracking-tight">
+            <HyperText duration={800} delay={700}>
+              Conquista
+            </HyperText>
+            {" "}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+              el futuro
+            </span>
+            {" "}
+            <span className="text-white">con IA</span>
+          </div>
         </div>
-        <p 
-          ref={subtitleRef} 
-          className="text-lg md:text-xl text-center max-w-3xl mb-12 font-light tracking-wide"
-          style={{
-            textShadow: '0 0 10px rgba(255,255,255,0.1)',
-            color: 'rgba(255,255,255,0.85)'
-          }}
-        >
-          En Datagora diseñamos soluciones de Inteligencia Artificial que impulsan a empresas y usuarios finales hacia un nuevo paradigma de eficiencia y crecimiento.
-        </p>
+
         <button 
           ref={buttonRef} 
-          className="group relative px-8 py-4 bg-transparent border-2 border-blue-400/50 rounded-full overflow-hidden transition-all duration-300 hover:border-blue-400"
+          className="group relative px-8 py-4 mt-12 bg-transparent border-2 border-blue-400/50 rounded-full overflow-hidden transition-all duration-300 hover:border-blue-400"
         >
           <span className="relative z-10 text-lg font-medium text-white/90 group-hover:text-white transition-colors">
             Conoce Cómo
