@@ -64,7 +64,7 @@ export default {
   		},
   		animation: {
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
-  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
+  			orbit: 'orbit var(--duration) linear infinite'
   		},
   		keyframes: {
   			rainbow: {
@@ -77,11 +77,11 @@ export default {
   			},
   			orbit: {
   				'0%': {
-  					transform: 'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)'
+  					transform: 'rotate(0deg) translateX(var(--radius)) rotate(0deg)',
   				},
   				'100%': {
-  					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
-  				}
+  					transform: 'rotate(360deg) translateX(var(--radius)) rotate(-360deg)',
+  				},
   			}
   		}
   	}
