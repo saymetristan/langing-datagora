@@ -132,9 +132,9 @@ export default function HeroSection() {
       <canvas ref={canvasRef} className="absolute inset-0" />
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/70" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
-        <div ref={titleRef} className="flex flex-col gap-4 text-center">
+        <div ref={titleRef} className="flex flex-col gap-6 text-center">
           <HyperText 
-            className="text-4xl md:text-5xl font-black tracking-wider"
+            className="text-5xl md:text-7xl font-black tracking-wider"
             duration={800}
             delay={300}
             startOnView={true}
@@ -143,27 +143,32 @@ export default function HeroSection() {
             DATAGORA
           </HyperText>
           
-          <div className="text-5xl md:text-7xl font-extrabold tracking-tight">
-            <HyperText duration={800} delay={500}>
-              Redefine
-            </HyperText>
-            {" "}
+          <HyperText 
+            className="text-5xl md:text-7xl font-black tracking-tight"
+            duration={800}
+            delay={500}
+            startOnView={true}
+            animateOnHover={true}
+          >
+            REDEFINE{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
-              el presente
+              EL PRESENTE
             </span>
-          </div>
+          </HyperText>
           
-          <div className="text-5xl md:text-7xl font-extrabold tracking-tight">
-            <HyperText duration={800} delay={700}>
-              Conquista
-            </HyperText>
-            {" "}
+          <HyperText 
+            className="text-5xl md:text-7xl font-black tracking-tight"
+            duration={800}
+            delay={700}
+            startOnView={true}
+            animateOnHover={true}
+          >
+            CONQUISTA{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
-              el futuro
+              EL FUTURO
             </span>
-            {" "}
-            <span className="text-white">con IA</span>
-          </div>
+            {" "}CON IA
+          </HyperText>
         </div>
 
         <button 
