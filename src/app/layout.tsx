@@ -21,12 +21,12 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://datagora.mx'),
   title: {
-    default: 'Datagora | Transformando el presente con IA. Conquistando el futuro.',
+    default: 'Datagora | Transformando el presente con IA',
     template: '%s | Datagora'
   },
   description: 'Transformamos empresas y usuarios con soluciones de Inteligencia Artificial. Automatización, eficiencia y crecimiento con tecnología de vanguardia.',
   keywords: ['inteligencia artificial', 'IA', 'automatización', 'machine learning', 'empresas', 'tecnología', 'innovación'],
-  authors: [{ name: 'Datagora' }],
+  authors: [{ name: 'Jorge Tristan' }],
   creator: 'Datagora',
   publisher: 'Datagora',
   robots: {
