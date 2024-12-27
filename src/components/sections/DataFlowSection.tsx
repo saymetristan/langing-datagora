@@ -123,7 +123,8 @@ export default function DataFlowSection() {
   return (
     <div 
       ref={containerRef} 
-      className="h-screen relative bg-black"
+      className="h-screen relative bg-gray-900"
+      style={{ backgroundColor: '#111827' }}
     />
   )
 } 
