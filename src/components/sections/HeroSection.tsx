@@ -143,32 +143,20 @@ export default function HeroSection() {
             DATAGORA
           </HyperText>
           
-          <HyperText 
-            className="text-5xl md:text-7xl font-black tracking-tight"
-            duration={800}
-            delay={500}
-            startOnView={true}
-            animateOnHover={true}
-          >
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
             REDEFINE{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
               EL PRESENTE
             </span>
-          </HyperText>
+          </h1>
           
-          <HyperText 
-            className="text-5xl md:text-7xl font-black tracking-tight"
-            duration={800}
-            delay={700}
-            startOnView={true}
-            animateOnHover={true}
-          >
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
             CONQUISTA{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
               EL FUTURO
             </span>
             {" "}CON IA
-          </HyperText>
+          </h1>
         </div>
 
         <button 
