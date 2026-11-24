@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El trabajo de Datágora</title>
+<style>
+:root{color-scheme:light;--papel:#F3F3EA;--tinta:#122F2C;--sec:#485e57;--linea:#c9d2c3;--lima:#C9DD5C;--foco:#0d6158}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--papel);color:var(--tinta);font:1rem/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.marco{width:min(100%,64rem);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,4rem)}
+h1,h2,p{margin:0}
+a{color:var(--tinta)}
+a:focus-visible{outline:2px solid var(--foco);outline-offset:4px;border-radius:2px}
+header{padding-top:clamp(1rem,3vw,1.75rem)}
+.casa{display:inline-flex;align-items:center;min-height:44px;font-weight:650;letter-spacing:-.02em;text-decoration:none}
+.casa:hover{text-decoration:underline;text-underline-offset:.22em}
+main{padding-block:clamp(2.5rem,8vw,6rem) clamp(3rem,8vw,6rem)}
+h1{font-size:clamp(1.6rem,3.4vw,2.6rem);font-weight:650;letter-spacing:-.025em;line-height:1.1}
+.entrada{margin-top:.6rem;max-width:44ch;color:var(--sec);font-size:clamp(.95rem,1.4vw,1.1rem)}
+.lista{list-style:none;margin:clamp(2.5rem,6vw,4.5rem) 0 0;padding:0}
+.lista li{display:grid;gap:.35rem 2rem;padding-block:clamp(1.1rem,2.6vw,1.6rem);border-top:1px solid var(--linea)}
+.lista li:last-child{border-bottom:1px solid var(--linea)}
+.verbo{font-size:clamp(1.9rem,5.4vw,3.4rem);font-weight:300;letter-spacing:-.035em;line-height:1;align-self:start}
+.verbo span{background:linear-gradient(var(--lima),var(--lima)) 0 88%/100% .2em no-repeat;padding-inline:.04em;overflow-wrap:anywhere}
+.pendiente .verbo{color:var(--sec);font-style:italic}
+.pendiente .verbo span{background:none}
+h2{font-size:1.15rem;font-weight:650;letter-spacing:-.01em;line-height:1.3}
+.ficha p{max-width:52ch;color:var(--sec);margin-top:.2rem}
+.destino{display:inline-block;min-height:44px;padding-block:.55rem;overflow-wrap:anywhere;font-size:.92rem;font-weight:500;text-decoration-thickness:1px;text-underline-offset:.22em}
+.destino:hover{text-decoration-thickness:2px}
+.destino small{font-size:inherit;font-weight:400;color:var(--sec);}
+footer{padding-block:1rem 2.5rem}
+footer nav{display:flex;flex-wrap:wrap;gap:0 1.4rem}
+footer a{display:inline-flex;align-items:center;min-height:44px;font-size:.9rem;color:#34534d;text-decoration-thickness:1px;text-underline-offset:.22em}
+footer a:hover{color:var(--tinta)}
+@media(min-width:44rem){.lista li{grid-template-columns:minmax(0,clamp(14rem,28vw,19rem)) minmax(0,1fr)}}
+@media(prefers-reduced-motion:no-preference){a{transition:color .15s,text-decoration-thickness .15s}}
+</style>
+</head>
+<body>
+<header class="marco"><a class="casa" href="/">Datágora</a></header>
+<main class="marco">
+<h1>El trabajo</h1>
+<p class="entrada">Lee las notas, consulta el código y descubre qué estamos diseñando.</p>
+<ul class="lista">
+<li>
+<p class="verbo" aria-hidden="true"><span>Leer</span></p>
+<div class="ficha">
+<h2>Colme</h2>
+<p>Coordina el modelo, el contexto y las herramientas que usa un agente.</p>
+<a class="destino" href="https://whaapy.com/colme-2">Leer la nota técnica de Colme <small>en whaapy.com</small></a>
+</div>
+</li>
+<li>
+<p class="verbo" aria-hidden="true"><span>Inspeccionar</span></p>
+<div class="ficha">
+<h2>Data Gateway</h2>
+<p>Conecta bases de datos, Shopify y archivos CSV para que un agente los consulte.</p>
+<a class="destino" href="https://github.com/saymetristan/data-gateway">Ver el código de Data Gateway <small>repositorio en GitHub</small></a>
+</div>
+</li>
+<li>
+<p class="verbo" aria-hidden="true"><span>Inspeccionar</span></p>
+<div class="ficha">
+<h2>Stellar Stack</h2>
+<p>Una plantilla con interfaz y servidor para empezar una aplicación web.</p>
+<a class="destino" href="https://github.com/saymetristan/StellarStack">Ver el código de Stellar Stack <small>repositorio en GitHub</small></a>
+</div>
+</li>
+<li>
+<p class="verbo" aria-hidden="true"><span>Leer</span></p>
+<div class="ficha">
+<h2>Safety Research</h2>
+<p>Pruebas para entender dónde falla un agente y cuándo hace falta revisión humana.</p>
+<a class="destino" href="https://jorgetristan.com/#datagora">Leer sobre Safety Research <small>en jorgetristan.com</small></a>
+</div>
+</li>
+<li class="pendiente">
+<p class="verbo"><span>En diseño</span></p>
+<div class="ficha">
+<h2>Tsuzuro</h2>
+<p>Una base para agentes que atienden clientes en nombre de una empresa y siguen sus reglas.</p>
+</div>
+</li>
+</ul>
+</main>
+<footer class="marco">
+<nav aria-label="Más de Datágora">
+<a href="https://automatizacion.datagora.mx/">Automatización</a>
+<a href="mailto:contacto@datagora.mx">Contacto</a>
+<a href="https://datagora.mx/privacidad">Privacidad</a>
+</nav>
+</footer>
+</body>
+</html>
